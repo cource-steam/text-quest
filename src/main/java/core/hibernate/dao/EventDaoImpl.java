@@ -4,13 +4,14 @@ import core.hibernate.util.HibernateSession;
 import entity.dto.Event;
 import org.hibernate.Session;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EventDaoImpl implements IEventDao {
 
-    public List<Event> findAll() {
+    public ArrayList<Event> findAll() {
         try(Session session = HibernateSession.getSession()) {
-            return session.createQuery("From Event", Event.class).list();
+            return (ArrayList<Event>) session.createQuery("From Event", Event.class).list();
         }
     }
 
