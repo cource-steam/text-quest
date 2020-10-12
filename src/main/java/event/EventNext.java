@@ -5,6 +5,7 @@ public class EventNext {
     private EventNext left;
     private EventNext right;
     private EventNext next;
+    public int e;
 
 
     public EventNext(String text, EventNext left, EventNext right) {
