@@ -9,18 +9,21 @@ import java.util.List;
 
 public class EventDaoImpl implements IEventDao {
 
-    public ArrayList<Event> findAll() {
+    @Override
+    public List<Event> findAll() {
         try(Session session = HibernateSession.getSession()) {
-            return (ArrayList<Event>) session.createQuery("From Event", Event.class).list();
+            return session.createQuery("From Event", Event.class).list();
         }
     }
 
+    @Override
     public Event findById(int id) {
         try(Session session = HibernateSession.getSession()) {
             return session.find(Event.class, id);
         }
     }
 
+    @Override
     public void save(Event entity) {
         try(Session session = HibernateSession.getSessionWithTransaction()) {
             session.save(entity);
@@ -28,13 +31,7 @@ public class EventDaoImpl implements IEventDao {
         }
     }
 
-    public void save(List<Event> entity) {
-        try(Session session = HibernateSession.getSessionWithTransaction()) {
-            entity.forEach(session::save);
-            HibernateSession.commit();
-        }
-    }
-
+    @Override
     public void update(Event entity) {
         try(Session session = HibernateSession.getSessionWithTransaction()) {
             session.update(entity);
@@ -42,6 +39,7 @@ public class EventDaoImpl implements IEventDao {
         }
     }
 
+    @Override
     public void delete(Event entity) {
         try(Session session = HibernateSession.getSessionWithTransaction()) {
             session.delete(entity);

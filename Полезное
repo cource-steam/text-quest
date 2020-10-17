@@ -114,3 +114,7 @@ public class MyAlgorithm {
         }
     }
 }
+
+Улучшения - развернуть liquibase под наш проект
+
+EventList -> подумать об улучшении или замене

@@ -1,24 +1,16 @@
 package test;
 
 import core.hibernate.dao.EventDaoImpl;
-import core.springdata.IEventRepository;
+import domain.EventMap;
 import entity.EventList;
 import entity.dto.Event;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Test {
 
-    @Autowired
-    public static IEventRepository repository;
-
-    public static void main(String[] args) throws IOException {
-        //Проверка работы с Spring
-        //repository.findAll().forEach(Event::toString);
-
-        EventList list = new EventList();
+    public static void main(String[] args) {
+        /*EventList list = new EventList();
         for (Event event : new EventDaoImpl().findAll()) {
             list.add(event);
         }
@@ -44,6 +36,6 @@ public class Test {
                     exit = true;
                 } else System.out.println("Перевыбери выбор:");
             }
-        }
+        }*/
     }
 }

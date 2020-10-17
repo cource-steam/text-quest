@@ -1,5 +1,6 @@
 package entity;
 
+import java.util.List;
 import java.util.Objects;
 import entity.dto.Event;
 
@@ -19,10 +20,10 @@ public class EventList {
             this.size = 1;
         } else {
             if (Objects.isNull(this.next)) {
-                this.size = this.size + 1;
+                this.size++;
                 this.next = new EventList(event);
             } else {
-                this.size = this.size + 1;
+                this.size++;
                 this.next.add(event);
             }
         }
