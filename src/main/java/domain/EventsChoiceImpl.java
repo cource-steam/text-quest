@@ -27,11 +27,11 @@ public class EventsChoiceImpl implements EventsChoice {
     }
 
     public static EventsChoiceImpl getInstance(Event event) {
-        List<Integer> nextEventsId = Arrays.stream(event.getNextEvents().split(","))
+        /*List<Integer> nextEventsId = Arrays.stream(event.getNextEvents().split(","))
                 .filter(v -> !v.trim().isEmpty())
                 .map(Integer::parseInt)
-                .collect(Collectors.toList());
-        return new EventsChoiceImpl(nextEventsId);
+                .collect(Collectors.toList());*/
+        return null; //new EventsChoiceImpl(nextEventsId);
     }
 
 }
