@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:spring="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Little Adventure</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript" src="webjars/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<div id = "event-text" th:text="${text}"> </div>
+<div class = "button" th:id = "${nextEventId}" th:text="${optionText1}"></div>
+
+<!--<div id = "button-2" th:text="${optionText2}></div>-->
+
+<!--<div id = "option-1" th:text="${optionText1}"> </div>
+<div th:text="${optionText2}"> </div>-->
+
+<!--<div th:each = "options, state : ${options}">
+    <td class="option-id" th:utext="${options.id}"></td>
+    <td class="option-text" th:utext="${options.text}"></td>
+    <td class="option-next-event-id" th:utext="${options.nextEventId}"></td>
+</div>-->
+
+</body>
+</html>
