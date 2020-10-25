@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import text.quest.web.domain.EventServices;
 
-@Controller //@Controller
+@RestController //@Controller
 @RequestMapping("/quest")
 public class TextQuestController {
 
@@ -16,21 +16,22 @@ public class TextQuestController {
         this.eventServices = eventServices;
     }
 
-    @GetMapping
-    public String getEvent(Model model) {
+    @RequestMapping(method = RequestMethod.GET)
+    public Model getEvent(Model model) {
         //EventDto eventDto = eventServices.getEvent(8);
 
         model.addAttribute("text", "World");
         model.addAttribute("optionText1", "World");
         model.addAttribute("nextEventId", 8);
-        return "quest";
+        return model;
     }
 
-    @GetMapping("/{id}")
-    public String getEventId(@PathVariable("id") Integer id, Model model) {
+    @RequestMapping(value = "/quest", method = RequestMethod.GET)
+    public Model getEventForId(@RequestParam Integer id, Model model) {
+        System.out.println(id);
         model.addAttribute("text", "World1");
         model.addAttribute("optionText1", "World1");
         model.addAttribute("nextEventId", 10);
-        return "quest";
+        return model;
     }
 }
