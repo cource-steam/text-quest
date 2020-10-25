@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Test {
 
     public static void main(String[] args) {
-        /*EventList list = new EventList();
+        EventList list = new EventList();
         for (Event event : new EventDaoImpl().findAll()) {
             list.add(event);
         }
@@ -36,6 +36,6 @@ public class Test {
                     exit = true;
                 } else System.out.println("Перевыбери выбор:");
             }
-        }*/
+        }
     }
 }
