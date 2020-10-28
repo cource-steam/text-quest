@@ -7,6 +7,9 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 import text.quest.web.domain.EventDto;
 import text.quest.web.domain.EventServices;
+import text.quest.web.entities.Option;
+
+import java.util.ArrayList;
 
 @RestController //@Controller
 public class TextQuestController {
@@ -26,9 +29,9 @@ public class TextQuestController {
     public Model getEventById(@RequestParam Integer id, Model model) {
         EventDto eventDto = eventServices.getEvent(id);
         model.addAttribute("text", eventDto.getEvent().getText());
-        model.addAttribute("optionText1", eventDto.getFirstOptions().getText());
-        model.addAttribute("nextEventId", eventDto.getFirstOptions().getNextEventId());
+        model.addAttribute("options", eventDto.getOptions());
 
+        System.out.println(eventDto.getOptions());
         return model;
     }
 
@@ -36,15 +39,4 @@ public class TextQuestController {
     public @ResponseBody Integer getNextEventId(@RequestParam Integer id) {
         return id;
     }
-
-    /*    @RequestMapping(value = "/quest", method = RequestMethod.GET)
-    public Model getEvent(Model model) {
-        //EventDto eventDto = eventServices.getEvent(8);
-
-        model.addAttribute("text", "World");
-        model.addAttribute("optionText1", "World");
-        model.addAttribute("nextEventId", 8);
-        return model;
-    }*/
-
 }
