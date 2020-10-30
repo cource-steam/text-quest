@@ -1,19 +1,20 @@
 .button {
-    background-color: #CEECF5;
+    background-color:#CEECF5;
     font-family:'Times New Roman';
 }
 
 #buttons {
-    padding: 10px;
+    padding:10px;
+    font-size:120%;
 }
 
 #event-text {
-    padding: 8%;
+    padding:8%;
     font-size:150%;
     font-family:'Times New Roman';
 }
 
 body {
-    background-color: #FBF8EF;
-    text-align: center;
+    background-color:#FBF8EF;
+    text-align:center;
 }
