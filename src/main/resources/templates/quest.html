@@ -17,18 +17,8 @@
 
 <div id="buttons" th:each="option, state : ${options}">
     <button class="button" th:id="${option.nextEventId}" th:text="${option.text}"></button>
+    <div></div>
 </div>
-
-<!--<div id = "button-2" th:text="${optionText2}></div>-->
-
-<!--<div id = "option-1" th:text="${optionText1}"> </div>
-<div th:text="${optionText2}"> </div>-->
-
-<!--<div th:each = "options, state : ${options}">
-    <td class="option-id" th:utext="${options.id}"></td>
-    <td class="option-text" th:utext="${options.text}"></td>
-    <td class="option-next-event-id" th:utext="${options.nextEventId}"></td>
-</div>-->
 
 </body>
 </html>
