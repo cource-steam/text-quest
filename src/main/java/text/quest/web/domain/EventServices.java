@@ -2,7 +2,6 @@ package text.quest.web.domain;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
-import text.quest.web.entities.Event;
 
 
 @Service("eventServices")

@@ -1,17 +1,12 @@
-package text.quest.web.presentation.contrillers;
+package text.quest.web.presentation.controllers;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.view.RedirectView;
 import text.quest.web.domain.EventDto;
 import text.quest.web.domain.EventServices;
-import text.quest.web.entities.Option;
 
-import java.util.ArrayList;
-
-@RestController //@Controller
+@RestController
 public class TextQuestController {
 
     private final EventServices eventServices;
@@ -35,8 +30,9 @@ public class TextQuestController {
         return model;
     }
 
-     @RequestMapping(value = "/quest", method = RequestMethod.POST)
-    public @ResponseBody Integer getNextEventId(@RequestParam Integer id) {
+    @RequestMapping(value = "/quest", method = RequestMethod.POST)
+    public @ResponseBody
+    Integer getNextEventId(@RequestParam Integer id) {
         return id;
     }
 }

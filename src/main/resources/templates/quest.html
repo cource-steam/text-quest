@@ -1,21 +1,22 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:spring="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Little Adventure</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script type="text/javascript" src="webjars/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
-    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.4.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <script src="webjars/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+    <link href="webjars/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
-<caption>
-    <font size="5" color="black" face="Times" id = "event-text" th:text="${text}"> </font>
-</caption>
+<div>
+    <font color="black" face="Times" size="5"> </font>
+    <p id="event-text" th:text="${text}"></p>
+</div>
 
-<div th:each = "option, state : ${options}">
-    <button class = "button" th:id = "${option.nextEventId}" th:text="${option.text}"></button>
+<div id="buttons" th:each="option, state : ${options}">
+    <button class="button" th:id="${option.nextEventId}" th:text="${option.text}"></button>
 </div>
 
 <!--<div id = "button-2" th:text="${optionText2}></div>-->
