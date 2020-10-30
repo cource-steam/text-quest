@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
     $('.button').click(function() {
         var id = {"id":this.id};
         $.post("/quest", id, onAjaxSuccess);
-        function onAjaxSuccess(data) {// Здесь мы получаем данные, отправленные сервером и выводим их на экран.
+        function onAjaxSuccess(data) {
             window.location.href = '../quest?id=' + data;
         }
     });

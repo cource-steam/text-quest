@@ -4,12 +4,12 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 
-@Service("eventServices")
-public class EventServices {
+@Service("eventService")
+public class EventService {
 
     private final EventDtoBuilderImpl eventDtoBuilder;
 
-    public EventServices(@Qualifier("eventDtoBuilderServices") final EventDtoBuilderImpl eventDtoBuilder) {
+    public EventService(@Qualifier("eventDtoBuilder") final EventDtoBuilderImpl eventDtoBuilder) {
         this.eventDtoBuilder = eventDtoBuilder;
     }
 

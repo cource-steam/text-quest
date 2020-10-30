@@ -25,5 +25,4 @@ public class Event {
 
     @Column(name = "options_second")
     Integer optionSecond;
-
 }

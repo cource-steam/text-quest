@@ -10,36 +10,33 @@
     </parent>
     <groupId>text.quest</groupId>
     <artifactId>text-quest-web</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>text-quest-web</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Текстовый квест</description>
 
     <properties>
         <java.version>11</java.version>
         <postgresql.version>42.2.8</postgresql.version>
+        <jquery.version>3.4.1</jquery.version>
+        <bootstrap.version>4.4.1</bootstrap.version>
     </properties>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.webjars/jquery -->
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
-            <version>3.4.1</version>
+            <version>${jquery.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>bootstrap</artifactId>
-            <version>4.4.1</version>
+            <version>${bootstrap.version}</version>
         </dependency>
-
-
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>${postgresql.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -58,7 +55,6 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
-
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -85,5 +81,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

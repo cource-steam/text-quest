@@ -22,6 +22,4 @@ public class Option {
 
     @Column(name = "next_event_id")
     Integer nextEventId;
-
-
 }
